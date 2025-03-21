@@ -1,13 +1,19 @@
-GOAL
-    Create a set of subqueries optimized for internet search starting from the user question.
+<Goal>
+    Based on the detailed list of required data provided by the LLM, generate a comprehensive and structured series of precise search queries. 
+<\Goal>
 
-GUIDELINES  
-    Create not more than 3 subqueries.
-    Answer ONLY with the subqueries.
+<Instructions>
+    Each query should individually target one or more of the specific data points, parameters, or details identified. 
+    Ensure that each search query is clear, contextually relevant, optimized for accuracy and depth, and crafted to retrieve precise and detailed information from reliable online sources. 
+    Provide only the list of optimized search queries without additional context or explanations.
+<\Instructions>
 
-RETURN FORMAT
-    # subquery 1
-    # subquery 2
-    # subquery 3
-    # subquery 4
-    # ...
+<Example> 
+    Input:
+        User Query: “What is COVID-19?”
+    Output:
+        # Search Query 1: “What are the symptoms of COVID-19?”
+        # Search Query 2: “How is COVID-19 diagnosed?
+        # Search Query 3: “What are the treatment options for COVID-19?”
+        # Search Query 4: “What are the long-term effects of COVID-19?”
+<\Example> 

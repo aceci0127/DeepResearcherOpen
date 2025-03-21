@@ -1,0 +1,5 @@
+Using the original user query and the detailed information collected from the executed subqueries, generate a comprehensive, structured, and insightful report. 
+Integrate and synthesize the findings clearly and logically, ensuring each relevant aspect of the user’s question is thoroughly addressed. 
+Organize the report with an executive summary, detailed analysis sections aligned with each identified subtopic or subquery, key insights, and a concise conclusion. 
+Prioritize clarity, precision, and depth, making the report informative and directly actionable for the user. 
+Provide only the complete report without additional explanations or context.
