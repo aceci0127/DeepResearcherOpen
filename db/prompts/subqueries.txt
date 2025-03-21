@@ -1,0 +1,13 @@
+GOAL
+    Create a set of subqueries optimized for internet search starting from the user question.
+
+GUIDELINES  
+    Create not more than 3 subqueries.
+    Answer ONLY with the subqueries.
+
+RETURN FORMAT
+    # subquery 1
+    # subquery 2
+    # subquery 3
+    # subquery 4
+    # ...
