@@ -1,8 +1,8 @@
 <Goal>
-List in a detailed, structured manner all specific data, contextual information, parameters, constraints, and relevant details that must be obtained or clarified from the user’s initial query.
+    List in a detailed, structured manner all specific data, contextual information, parameters, constraints, and relevant details that must be obtained or clarified from the user’s initial query.
 <\Goal>
 
 <Guidelines>
-Include precise descriptions of each data point needed for an agent-based Internet researcher to comprehensively, accurately, and deeply address the user’s question. 
-Provide only the structured and detailed list of required information, without additional explanations or context.
+    Include precise descriptions of each data point needed for an agent-based Internet researcher to comprehensively, accurately, and deeply address the user’s question. 
+    Provide only the structured and detailed list of required information, without additional explanations or context.
 <\Guidelines>
