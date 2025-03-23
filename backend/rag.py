@@ -4,7 +4,7 @@ In this file, we will create a function that will be responsible take the search
 from openai import OpenAI
 import os
 from research import Searcher
-from chat import chat
+from backend.deepresearch import chat
 from dotenv import load_dotenv
 load_dotenv()
 

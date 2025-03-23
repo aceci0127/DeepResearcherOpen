@@ -3,8 +3,6 @@ In this file, we will create a function that will be responsible for handling th
 """
 from openai import OpenAI
 import os
-from research import Searcher
-from subqueries_generator import subqueries_generator
 from dotenv import load_dotenv
 import trafilatura
 from googleapiclient.discovery import build

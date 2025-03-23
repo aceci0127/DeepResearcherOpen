@@ -1,20 +1,13 @@
 import streamlit as st
 from datetime import datetime
-import random
+from backend.deepresearch import agent_fast_reply  # Updated import
 
-def get_bot_response(user_message):
-    """
-    Simple function to generate bot responses based on user input.
-    In a real application, you might use a more sophisticated NLP model.
-    """
-    responses = [
-        f"I understand you're saying: '{user_message}'",
-        "That's an interesting point. Tell me more.",
-        "I'm processing what you just shared.",
-        "Thanks for that information. How can I help further?",
-        "I appreciate your input. Let me think about that."
-    ]
-    return random.choice(responses)
+# This MUST be the first Streamlit command
+st.set_page_config(
+    page_title="My Streamlit Chatbot",  # Default title
+    page_icon="🤖",  # Default icon
+    layout="wide"  # Optional
+)
 
 def main():
     # App configuration from sidebar
@@ -22,7 +15,7 @@ def main():
         st.title("Chatbot Settings")
         
         # Customizable options
-        page_title = st.text_input("Page Title", "My Streamlit Chatbot")
+        page_title_input = st.text_input("Page Title", "My Streamlit Chatbot")
         bot_name = st.text_input("Bot Name", "StarBot")
         
         # Theme color options
@@ -49,9 +42,6 @@ def main():
             st.session_state.messages = []
             st.experimental_rerun()
 
-    # Set page title based on user input
-    st.set_page_config(page_title=page_title, page_icon=bot_icon)
-    
     # Apply custom styling based on theme color
     st.markdown(
         f"""
@@ -69,7 +59,7 @@ def main():
     )
 
     # Main chat interface
-    st.title(f"{bot_icon} {page_title}")
+    st.title(f"{bot_icon} {page_title_input}")
     st.markdown(f"Chat with {bot_name} - powered by Streamlit")
     
     # Initialize chat history in session state if it doesn't exist
@@ -119,8 +109,8 @@ def main():
                 }
                 st.session_state.messages.append(user_message)
                 
-                # Generate and add bot response
-                bot_reply = get_bot_response(user_input)
+                # Generate and add bot response using agent_fast_reply
+                bot_reply = agent_fast_reply(user_input)
                 bot_message = {
                     "role": "assistant",
                     "content": bot_reply,

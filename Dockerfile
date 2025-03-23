@@ -17,4 +17,4 @@ RUN chown -R appuser:appuser /app
 USER appuser
 
 # Command to run the application
-CMD ["sh", "-c", "streamlit run /Users/alfredoceci/Desktop/ATHENA SRL.l/CODING/SearchGPTonATHENA/frontend/chat.py"]
+CMD ["streamlit", "run", "frontend/chat.py"]
