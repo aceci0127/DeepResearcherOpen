@@ -2,7 +2,7 @@ services:
 
   frontend:
     build: .
-    container_name: search-frontent
+    container_name: DeepResearch Open
     ports:
       - "8501:8501"
     environment:

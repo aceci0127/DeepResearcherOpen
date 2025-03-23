@@ -60,10 +60,10 @@ def search_engine(query):
 
 def subqueries(query):
     subqueries = []
-    data_prompt = init_prompt3 + "User query: " + str(query)
-    data = chat(data_prompt)
-    subqueries_prompt = init_prompt4 + "Data: " + str(data)
-    subqueries = chat(subqueries_prompt)
+    data_prompt = "User query: " + str(query)
+    data = chat(init_prompt3, data_prompt)
+    subqueries_prompt = "Data: " + str(data)
+    subqueries = chat(init_prompt4, subqueries_prompt)
     sub_queries_list = [line.split('# ', 1)[-1] for line in subqueries.splitlines() if line.strip()]
     return sub_queries_list
 
@@ -84,6 +84,6 @@ def full_agentic_search(query):
 
 def agent_fast_reply(query):
     final_content = full_agentic_search(query)
-    final_prompt = init_prompt5 + "User query: " + str(query) + "Internet Results: " + str(final_content)
-    answer = chat(final_prompt)
-    return {"output": answer}
+    final_prompt = "User query: " + str(query) + "Internet Results: " + str(final_content)
+    answer = chat(init_prompt5, final_prompt)
+    return answer
