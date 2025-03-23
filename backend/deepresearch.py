@@ -23,12 +23,15 @@ def chat(prompt, context):
     answer = response.choices[0].message.content
     return answer
 
-prompt_dir = "/Users/alfredoceci/Desktop/ATHENA SRL.l/CODING/SearchGPTonATHENA/db/prompts/"
-with open(prompt_dir + "answer.txt", "r") as file:
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+prompt_dir = os.path.join(BASE_DIR, 'db', 'prompts')
+with open(os.path.join(prompt_dir, "answer.txt"), "r") as file:
     init_prompt5 = file.read()
-with open(prompt_dir + "subqueries.txt", "r") as file:
+
+with open(os.path.join(prompt_dir, "subqueries.txt"), "r") as file:
     init_prompt4 = file.read()
-with open(prompt_dir + "reasoner.txt", "r") as file:
+
+with open(os.path.join(prompt_dir, "reasoner.txt"), "r") as file:
     init_prompt3 = file.read()
 
 
