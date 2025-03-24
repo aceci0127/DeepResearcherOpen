@@ -17,3 +17,7 @@
         # Search Query 3: “What are the treatment options for COVID-19?”
         # Search Query 4: “What are the long-term effects of COVID-19?”
 <\Example> 
+
+<Guidelines>
+    Follow the format in the example output.
+<\Guidelines>
